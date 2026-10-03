@@ -1,0 +1,2989 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "file_type": "code",
+      "norm_label": "mainactivity",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L57"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1result_task1result",
+      "label": "Task1Result",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "task1result",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/Task1Result.kt",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_exampleinstrumentedtest",
+      "label": "ExampleInstrumentedTest",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ExampleInstrumentedTest.kt",
+      "file_type": "code",
+      "norm_label": "exampleinstrumentedtest",
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_exampleunittest",
+      "label": "ExampleUnitTest",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "ExampleUnitTest.kt",
+      "file_type": "code",
+      "norm_label": "exampleunittest",
+      "source_file": "app/src/test/java/com/example/test1internalrepresentation/ExampleUnitTest.kt",
+      "source_location": "L12"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity_oncreate",
+      "label": ".onCreate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "file_type": "code",
+      "norm_label": ".oncreate()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L58"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_test1internalrepresentationtheme",
+      "label": "Test1InternalRepresentationTheme()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "file_type": "code",
+      "norm_label": "test1internalrepresentationtheme()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L36"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_addoneinbinary",
+      "label": "addOneInBinary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "addoneinbinary()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L134"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_conversiontobinary",
+      "label": "conversionToBinary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "conversiontobinary()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L119"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_fillinthemissingdigits",
+      "label": "fillInTheMissingDigits()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "fillinthemissingdigits()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L123"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_generateverificationstep",
+      "label": "generateVerificationStep()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "generateverificationstep()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L75"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_reversestroke",
+      "label": "reverseStroke()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "reversestroke()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L127"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "label": "solveTask1WithSteps()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "solvetask1withsteps()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_suminbinary",
+      "label": "sumInBinary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "suminbinary()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L160"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1_totwoscomplement",
+      "label": "toTwosComplement()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "totwoscomplement()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L140"
+    },
+    {
+      "id": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext",
+      "label": ".useAppContext()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ExampleInstrumentedTest.kt",
+      "file_type": "code",
+      "norm_label": ".useappcontext()",
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L18"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_resultcard",
+      "label": "ResultCard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Task1Screen",
+      "file_type": "code",
+      "norm_label": "resultcard()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L246"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "label": "Task1Screen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Task1Screen",
+      "file_type": "code",
+      "norm_label": "task1screen()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L71"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1stepsscreen",
+      "label": "Task1StepsScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Task1Screen",
+      "file_type": "code",
+      "norm_label": "task1stepsscreen()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L206"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1verificationstep",
+      "label": "Task1VerificationStep()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Task1Screen",
+      "file_type": "code",
+      "norm_label": "task1verificationstep()",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L226"
+    },
+    {
+      "id": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_exampleunittest_addition_iscorrect",
+      "label": ".addition_isCorrect()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "ExampleUnitTest.kt",
+      "file_type": "code",
+      "norm_label": ".addition_iscorrect()",
+      "source_file": "app/src/test/java/com/example/test1internalrepresentation/ExampleUnitTest.kt",
+      "source_location": "L13"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "label": "MainActivity.kt",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "file_type": "code",
+      "norm_label": "mainactivity.kt",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "label": "Theme.kt",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "file_type": "code",
+      "norm_label": "theme.kt",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_kt_composable",
+      "label": "Composable",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "file_type": "code",
+      "norm_label": "composable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "bundle",
+      "label": "Bundle",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "file_type": "code",
+      "norm_label": "bundle",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "componentactivity",
+      "label": "ComponentActivity",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "file_type": "code",
+      "norm_label": "componentactivity",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "build_gradle",
+      "label": "build.gradle.kts",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "build.gradle.kts",
+      "file_type": "code",
+      "norm_label": "build.gradle.kts",
+      "source_file": "build.gradle.kts",
+      "source_location": "L1"
+    },
+    {
+      "id": "settings_gradle",
+      "label": "settings.gradle.kts",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "settings.gradle.kts",
+      "file_type": "code",
+      "norm_label": "settings.gradle.kts",
+      "source_file": "settings.gradle.kts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "label": "task1.kt",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "task1.kt",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_task1result",
+      "label": "Task1Result.kt",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "task1.kt",
+      "file_type": "code",
+      "norm_label": "task1result.kt",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/Task1Result.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest",
+      "label": "ExampleInstrumentedTest.kt",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ExampleInstrumentedTest.kt",
+      "file_type": "code",
+      "norm_label": "exampleinstrumentedtest.kt",
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_kt_test",
+      "label": "Test",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ExampleInstrumentedTest.kt",
+      "file_type": "code",
+      "norm_label": "test",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "runwith",
+      "label": "RunWith",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ExampleInstrumentedTest.kt",
+      "file_type": "code",
+      "norm_label": "runwith",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_kt_composable",
+      "label": "Composable",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Task1Screen",
+      "file_type": "code",
+      "norm_label": "composable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "modifier",
+      "label": "Modifier",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Task1Screen",
+      "file_type": "code",
+      "norm_label": "modifier",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_type",
+      "label": "Type.kt",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "Type.kt",
+      "file_type": "code",
+      "norm_label": "type.kt",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Type.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest",
+      "label": "ExampleUnitTest.kt",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "ExampleUnitTest.kt",
+      "file_type": "code",
+      "norm_label": "exampleunittest.kt",
+      "source_file": "app/src/test/java/com/example/test1internalrepresentation/ExampleUnitTest.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_kt_test",
+      "label": "Test",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "ExampleUnitTest.kt",
+      "file_type": "code",
+      "norm_label": "test",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "gradlew",
+      "label": "gradlew",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "gradlew",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "norm_label": "gradlew",
+      "source_file": "gradlew",
+      "source_location": "L1"
+    },
+    {
+      "id": "gradlew__entry",
+      "label": "gradlew script",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "gradlew",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "norm_label": "gradlew script",
+      "source_file": "gradlew",
+      "source_location": "L1"
+    },
+    {
+      "id": "gradlew_die",
+      "label": "die()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "gradlew",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "norm_label": "die()",
+      "source_file": "gradlew",
+      "source_location": "L98"
+    },
+    {
+      "id": "gradlew_warn",
+      "label": "warn()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "gradlew",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "norm_label": "warn()",
+      "source_file": "gradlew",
+      "source_location": "L94"
+    },
+    {
+      "id": "app_build_gradle",
+      "label": "app/build.gradle.kts",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "app/build.gradle.kts",
+      "file_type": "code",
+      "norm_label": "app/build.gradle.kts",
+      "source_file": "app/build.gradle.kts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_color",
+      "label": "Color.kt",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "Color.kt",
+      "file_type": "code",
+      "norm_label": "color.kt",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Color.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "alignment",
+      "label": "alignment",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "alignment",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "animatedvisibility",
+      "label": "animatedvisibility",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "animatedvisibility",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "arrangement",
+      "label": "arrangement",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "arrangement",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "background",
+      "label": "background",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "background",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "borderstroke",
+      "label": "borderstroke",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "borderstroke",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "button",
+      "label": "button",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "button",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "card",
+      "label": "card",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "card",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "carddefaults",
+      "label": "carddefaults",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "carddefaults",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "clickable",
+      "label": "clickable",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "clickable",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "clip",
+      "label": "clip",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "clip",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "column",
+      "label": "column",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "column",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "delay",
+      "label": "delay",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "delay",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "dp",
+      "label": "dp",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "dp",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "enableedgetoedge",
+      "label": "enableedgetoedge",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "enableedgetoedge",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "expandvertically",
+      "label": "expandvertically",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "expandvertically",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fadein",
+      "label": "fadein",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fadein",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fadeout",
+      "label": "fadeout",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fadeout",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fillmaxsize",
+      "label": "fillmaxsize",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fillmaxsize",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fillmaxwidth",
+      "label": "fillmaxwidth",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fillmaxwidth",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "getvalue",
+      "label": "getvalue",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "getvalue",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "horizontaldivider",
+      "label": "horizontaldivider",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "horizontaldivider",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "keyboardoptions",
+      "label": "keyboardoptions",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "keyboardoptions",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "keyboardtype",
+      "label": "keyboardtype",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "keyboardtype",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "launch",
+      "label": "launch",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "launch",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "launchedeffect",
+      "label": "launchedeffect",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "launchedeffect",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "localfocusmanager",
+      "label": "localfocusmanager",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "localfocusmanager",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "milliseconds",
+      "label": "milliseconds",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "milliseconds",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "mutableintstateof",
+      "label": "mutableintstateof",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "mutableintstateof",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "mutablestateof",
+      "label": "mutablestateof",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "mutablestateof",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "outlinedtextfield",
+      "label": "outlinedtextfield",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "outlinedtextfield",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "padding",
+      "label": "padding",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "padding",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "remember",
+      "label": "remember",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "remember",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "remembercoroutinescope",
+      "label": "remembercoroutinescope",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "remembercoroutinescope",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "rememberscrollstate",
+      "label": "rememberscrollstate",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "rememberscrollstate",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "roundedcornershape",
+      "label": "roundedcornershape",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "roundedcornershape",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "row",
+      "label": "row",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "row",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "scaffold",
+      "label": "scaffold",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "scaffold",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "setcontent",
+      "label": "setcontent",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "setcontent",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "setvalue",
+      "label": "setvalue",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "setvalue",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "shrinkvertically",
+      "label": "shrinkvertically",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "shrinkvertically",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "snapshotflow",
+      "label": "snapshotflow",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "snapshotflow",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "text",
+      "label": "text",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "text",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "tween",
+      "label": "tween",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "tween",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "verticalscroll",
+      "label": "verticalscroll",
+      "community": 0,
+      "community_name": "MainActivity.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "verticalscroll",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "activity",
+      "label": "activity",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "activity",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "build",
+      "label": "build",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "build",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "darkcolorscheme",
+      "label": "darkcolorscheme",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "darkcolorscheme",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "dynamicdarkcolorscheme",
+      "label": "dynamicdarkcolorscheme",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "dynamicdarkcolorscheme",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "dynamiclightcolorscheme",
+      "label": "dynamiclightcolorscheme",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "dynamiclightcolorscheme",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "issystemindarktheme",
+      "label": "issystemindarktheme",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "issystemindarktheme",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "lightcolorscheme",
+      "label": "lightcolorscheme",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "lightcolorscheme",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "localcontext",
+      "label": "localcontext",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "localcontext",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "materialtheme",
+      "label": "materialtheme",
+      "community": 1,
+      "community_name": "Theme.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "materialtheme",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "abs",
+      "label": "abs",
+      "community": 2,
+      "community_name": "task1.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "abs",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "androidjunit4",
+      "label": "androidjunit4",
+      "community": 3,
+      "community_name": "ExampleInstrumentedTest.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "androidjunit4",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "instrumentationregistry",
+      "label": "instrumentationregistry",
+      "community": 3,
+      "community_name": "ExampleInstrumentedTest.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "instrumentationregistry",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fontfamily",
+      "label": "fontfamily",
+      "community": 5,
+      "community_name": "Type.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fontfamily",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fontweight",
+      "label": "fontweight",
+      "community": 5,
+      "community_name": "Type.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fontweight",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "sp",
+      "label": "sp",
+      "community": 5,
+      "community_name": "Type.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "sp",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "textstyle",
+      "label": "textstyle",
+      "community": 5,
+      "community_name": "Type.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "textstyle",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "typography",
+      "label": "typography",
+      "community": 5,
+      "community_name": "Type.kt",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "typography",
+      "source_file": "",
+      "type": "external"
+    }
+  ],
+  "links": [
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_exampleinstrumentedtest",
+      "target": "runwith",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext",
+      "target": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_kt_test",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_resultcard",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_kt_composable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_kt_composable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1stepsscreen",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_kt_composable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1verificationstep",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_kt_composable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_test1internalrepresentationtheme",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_kt_composable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_exampleunittest_addition_iscorrect",
+      "target": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_kt_test",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "app/src/test/java/com/example/test1internalrepresentation/ExampleUnitTest.kt",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity_oncreate",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity_oncreate",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity_oncreate",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_test1internalrepresentationtheme",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity_oncreate",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_resultcard",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1stepsscreen",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1verificationstep",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_generateverificationstep",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_reversestroke",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_generateverificationstep",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_addoneinbinary",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_conversiontobinary",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_fillinthemissingdigits",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_reversestroke",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_addoneinbinary",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_suminbinary",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_generateverificationstep",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_suminbinary",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_totwoscomplement",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_totwoscomplement",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_addoneinbinary",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_totwoscomplement",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_reversestroke",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_totwoscomplement",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_fillinthemissingdigits",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_totwoscomplement",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_conversiontobinary",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "gradlew__entry",
+      "target": "gradlew_die",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "gradlew",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "gradlew__entry",
+      "target": "gradlew_warn",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "gradlew",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "activity",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "android.app.Activity"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "build",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "android.os.Build"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "bundle",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "android.os.Bundle"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "componentactivity",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.activity.ComponentActivity"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "setcontent",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.activity.compose.setContent"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "enableedgetoedge",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.activity.enableEdgeToEdge"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "animatedvisibility",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.animation.AnimatedVisibility"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "tween",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.animation.core.tween"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "expandvertically",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.animation.expandVertically"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "fadein",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.animation.fadeIn"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "fadeout",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.animation.fadeOut"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "shrinkvertically",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.animation.shrinkVertically"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "borderstroke",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.BorderStroke"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "background",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.background"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "clickable",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.clickable"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "issystemindarktheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.isSystemInDarkTheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "arrangement",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.layout.Arrangement"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "column",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.layout.Column"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "row",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.layout.Row"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "fillmaxsize",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.layout.fillMaxSize"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "fillmaxwidth",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.layout.fillMaxWidth"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "padding",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.layout.padding"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "rememberscrollstate",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.rememberScrollState"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "roundedcornershape",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.shape.RoundedCornerShape"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "keyboardoptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.text.KeyboardOptions"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "verticalscroll",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.foundation.verticalScroll"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "button",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.Button"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "card",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.Card"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "carddefaults",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.CardDefaults"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "horizontaldivider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.HorizontalDivider"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "materialtheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.MaterialTheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "materialtheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.MaterialTheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "outlinedtextfield",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.OutlinedTextField"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "scaffold",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.Scaffold"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "text",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.Text"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_type",
+      "target": "typography",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.Typography"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Type.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "darkcolorscheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.darkColorScheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "dynamicdarkcolorscheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.dynamicDarkColorScheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "dynamiclightcolorscheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.dynamicLightColorScheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "lightcolorscheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.material3.lightColorScheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_kt_composable",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.Composable"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_kt_composable",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.Composable"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "launchedeffect",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.LaunchedEffect"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "getvalue",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.getValue"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "mutableintstateof",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.mutableIntStateOf"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "mutablestateof",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.mutableStateOf"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "remember",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.remember"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "remembercoroutinescope",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.rememberCoroutineScope"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "setvalue",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.setValue"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "snapshotflow",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.runtime.snapshotFlow"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "alignment",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.Alignment"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "modifier",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.Modifier"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "clip",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.draw.clip"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "localcontext",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.platform.LocalContext"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "localfocusmanager",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.platform.LocalFocusManager"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_type",
+      "target": "textstyle",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.text.TextStyle"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Type.kt",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "fontfamily",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.text.font.FontFamily"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_type",
+      "target": "fontfamily",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.text.font.FontFamily"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Type.kt",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "fontweight",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.text.font.FontWeight"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_type",
+      "target": "fontweight",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.text.font.FontWeight"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Type.kt",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "keyboardtype",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.text.input.KeyboardType"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "dp",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.unit.dp"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "sp",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.unit.sp"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_type",
+      "target": "sp",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.compose.ui.unit.sp"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Type.kt",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest",
+      "target": "androidjunit4",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.test.ext.junit.runners.AndroidJUnit4"
+      },
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest",
+      "target": "instrumentationregistry",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "androidx.test.platform.app.InstrumentationRegistry"
+      },
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_test1internalrepresentationtheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "com.example.test1internalrepresentation.ui.theme.Test1InternalRepresentationTheme"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "abs",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "kotlin.math.abs"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "milliseconds",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "kotlin.time.Duration.Companion.milliseconds"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "delay",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "kotlinx.coroutines.delay"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "launch",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "kotlinx.coroutines.launch"
+      },
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest",
+      "target": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_kt_test",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "org.junit.Test"
+      },
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest",
+      "target": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_kt_test",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "org.junit.Test"
+      },
+      "source_file": "app/src/test/java/com/example/test1internalrepresentation/ExampleUnitTest.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest",
+      "target": "runwith",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "target_fqn": "org.junit.runner.RunWith"
+      },
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity_oncreate",
+      "target": "bundle",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "target": "modifier",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1stepsscreen",
+      "target": "modifier",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1verificationstep",
+      "target": "modifier",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1result_task1result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest",
+      "target": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_exampleinstrumentedtest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1stepsscreen",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1verificationstep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_resultcard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_conversiontobinary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_fillinthemissingdigits",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_reversestroke",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_addoneinbinary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_totwoscomplement",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_suminbinary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_generateverificationstep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/task1.kt",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_task1result",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1result_task1result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/Task1Result.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_ui_theme_theme_test1internalrepresentationtheme",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/ui/theme/Theme.kt",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest",
+      "target": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_exampleunittest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/test/java/com/example/test1internalrepresentation/ExampleUnitTest.kt",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "gradlew",
+      "target": "gradlew__entry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "gradlew",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "gradlew",
+      "target": "gradlew_warn",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "gradlew",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "gradlew",
+      "target": "gradlew_die",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "gradlew",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity",
+      "target": "componentactivity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_exampleinstrumentedtest",
+      "target": "app_src_androidtest_java_com_example_test1internalrepresentation_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/androidTest/java/com/example/test1internalrepresentation/ExampleInstrumentedTest.kt",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_mainactivity_oncreate",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_exampleunittest",
+      "target": "app_src_test_java_com_example_test1internalrepresentation_exampleunittest_exampleunittest_addition_iscorrect",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/test/java/com/example/test1internalrepresentation/ExampleUnitTest.kt",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_test1internalrepresentation_mainactivity_task1screen",
+      "target": "app_src_main_java_com_example_test1internalrepresentation_task1_solvetask1withsteps",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "app/src/main/java/com/example/test1internalrepresentation/MainActivity.kt",
+      "source_location": "L133",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "de72ffacbf024bbb26e3b553a0336e335bfde89b"
+}
