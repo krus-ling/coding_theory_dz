@@ -1,4 +1,4 @@
-package com.example.test1internalrepresentation
+package com.example.test1internalrepresentation.domain.model
 
 data class Task1Result(
     val decimalResult: Int,
