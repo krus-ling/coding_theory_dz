@@ -10,6 +10,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,16 +24,17 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.outlined.HelpOutline
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Lightbulb
-import androidx.compose.material.icons.automirrored.outlined.HelpOutline
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
@@ -395,6 +397,9 @@ private fun AlgorithmComparisonHelp() {
 
 @Composable
 private fun EntropyOverviewCard(analysis: CodingAnalysis) {
+    val symbolCount = analysis.shannonFano.codes.size
+    val isHighGrade = symbolCount > 100
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(20.dp),
@@ -404,18 +409,52 @@ private fun EntropyOverviewCard(analysis: CodingAnalysis) {
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(
-                    imageVector = Icons.Default.BarChart,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary
-                )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.weight(1f, fill = false)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.BarChart,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = "Характеристики источника",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = "Характеристики источника",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
+
+                Surface(
+                    shape = RoundedCornerShape(10.dp),
+                    color = if (isHighGrade) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant,
+                    contentColor = if (isHighGrade) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurfaceVariant
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            imageVector = if (isHighGrade) Icons.Default.CheckCircle else Icons.Default.BarChart,
+                            contentDescription = null,
+                            modifier = Modifier.size(12.dp)
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(
+                            text = "$symbolCount уникальных символов",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
             }
 
             HorizontalDivider()
@@ -568,9 +607,9 @@ private fun TableHeader() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text("Симв.", modifier = Modifier.weight(0.8f), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
-            Text("P(a)", modifier = Modifier.weight(1f), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
-            Text("Шеннон-Ф.", modifier = Modifier.weight(1.3f), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
-            Text("Хаффман", modifier = Modifier.weight(1.3f), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
+            Text("P(a)", modifier = Modifier.weight(0.9f), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
+            Text("Шеннон-Ф.", modifier = Modifier.weight(1.65f), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
+            Text("Хаффман", modifier = Modifier.weight(1.65f), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
         }
     }
 }
@@ -601,18 +640,18 @@ private fun TableRow(index: Int, symbol: String, prob: String, sfCode: String, h
             )
             Text(
                 text = prob,
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(0.9f),
                 style = MaterialTheme.typography.bodySmall
             )
 
             CodeBadge(
                 code = sfCode,
-                modifier = Modifier.weight(1.3f)
+                modifier = Modifier.weight(1.65f)
             )
 
             CodeBadge(
                 code = hufCode,
-                modifier = Modifier.weight(1.3f)
+                modifier = Modifier.weight(1.65f)
             )
         }
     }
@@ -625,21 +664,23 @@ private fun CodeBadge(code: String, modifier: Modifier = Modifier) {
         shape = RoundedCornerShape(8.dp),
         color = MaterialTheme.colorScheme.surfaceContainerHighest
     ) {
-        Row(
+        Column(
             modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
                 text = code,
                 fontFamily = FontFamily.Monospace,
-                fontSize = 12.sp,
+                fontSize = 11.sp,
                 fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                softWrap = false,
+                modifier = Modifier.horizontalScroll(rememberScrollState()),
                 color = MaterialTheme.colorScheme.onSurface
             )
             Text(
-                text = "(${code.length})",
-                fontSize = 10.sp,
+                text = "l = ${code.length}",
+                fontSize = 9.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
