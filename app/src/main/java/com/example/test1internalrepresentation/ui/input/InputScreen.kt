@@ -27,12 +27,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Analytics
+import androidx.compose.material.icons.filled.AutoFixHigh
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.FormatListNumbered
 import androidx.compose.material.icons.filled.TextFields
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -44,6 +46,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -73,6 +76,7 @@ fun InputScreen(
     state: UiState,
     onSelectMode: (InputMode) -> Unit,
     onTextChanged: (String) -> Unit,
+    onInsertRichTextPreset: () -> Unit,
     onCustomProbChanged: (String) -> Unit,
     onCalculateClick: () -> Unit,
     onBackClick: () -> Unit
@@ -127,7 +131,8 @@ fun InputScreen(
                 item {
                     TextAnalysisSection(
                         text = state.inputText,
-                        onTextChanged = onTextChanged
+                        onTextChanged = onTextChanged,
+                        onInsertRichTextPreset = onInsertRichTextPreset
                     )
                 }
             }
@@ -196,7 +201,8 @@ private fun ModeSelectionSection(
     val modes = listOf(
         InputMode.VARIANT_7_UPPER to "Вар. 7 (Верх)",
         InputMode.VARIANT_7_LOWER to "Вар. 7 (Низ)",
-        InputMode.TEXT_ANALYSIS to "Текст >100 символов",
+        InputMode.LARGE_ALPHABET_120 to "Алфавит 120 символов",
+        InputMode.TEXT_ANALYSIS to "Текст >100 уникальных",
         InputMode.CUSTOM_PROBABILITIES to "Вручную"
     )
 
@@ -234,10 +240,11 @@ private fun ModeSelectionSection(
 @Composable
 private fun TextAnalysisSection(
     text: String,
-    onTextChanged: (String) -> Unit
+    onTextChanged: (String) -> Unit,
+    onInsertRichTextPreset: () -> Unit
 ) {
-    val length = text.length
-    val isLengthOk = length >= 100
+    val uniqueCount = text.toSet().size
+    val isUniqueOk = uniqueCount >= 100
 
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -264,21 +271,21 @@ private fun TextAnalysisSection(
 
                 Surface(
                     shape = RoundedCornerShape(10.dp),
-                    color = if (isLengthOk) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant,
-                    contentColor = if (isLengthOk) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurfaceVariant
+                    color = if (isUniqueOk) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant,
+                    contentColor = if (isUniqueOk) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurfaceVariant
                 ) {
                     Row(
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            imageVector = if (isLengthOk) Icons.Default.CheckCircle else Icons.Default.TextFields,
+                            imageVector = if (isUniqueOk) Icons.Default.CheckCircle else Icons.Default.TextFields,
                             contentDescription = null,
                             modifier = Modifier.size(14.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = if (isLengthOk) "$length символов ✔" else "$length / 100 символов",
+                            text = if (isUniqueOk) "Уникальных: $uniqueCount ✔" else "Уникальных: $uniqueCount / 100",
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -298,6 +305,24 @@ private fun TextAnalysisSection(
                 ),
                 modifier = Modifier.fillMaxWidth()
             )
+
+            OutlinedButton(
+                onClick = onInsertRichTextPreset,
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.AutoFixHigh,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = "Вставить готовый текст (>100 уникальных символов)",
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.Bold
+                )
+            }
         }
     }
 }
@@ -341,6 +366,8 @@ private fun EnsemblePreviewCard(
 ) {
     val probSum = state.symbols.sumOf { it.probability }
     val isValidSum = abs(probSum - 1.0) <= 0.05
+    val uniqueCount = state.uniqueSymbolCount
+    val isHighGradeMet = uniqueCount > 100
 
     ElevatedCard(
         onClick = onClick,
@@ -394,11 +421,62 @@ private fun EnsemblePreviewCard(
                 }
             }
 
-            Text(
-                text = "Мощность алфавита N = ${state.symbols.size}",
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.SemiBold
-            )
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(
+                    text = "Мощность алфавита (уникальных символов): N = $uniqueCount",
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontWeight = FontWeight.Bold
+                )
+
+                if (isHighGradeMet) {
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = MaterialTheme.colorScheme.primaryContainer
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.CheckCircle,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(14.dp)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "Требование на высокую оценку выполнено ($uniqueCount > 100)",
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onPrimaryContainer
+                            )
+                        }
+                    }
+                } else if (state.currentMode == InputMode.TEXT_ANALYSIS) {
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = MaterialTheme.colorScheme.secondaryContainer
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Warning,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                                modifier = Modifier.size(14.dp)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "Уникальных символов меньше 100 ($uniqueCount). Используйте кнопку вставки текста.",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSecondaryContainer
+                            )
+                        }
+                    }
+                }
+            }
 
             LazyRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),

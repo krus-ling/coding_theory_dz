@@ -53,6 +53,7 @@ fun RootScreen() {
                         state = codingState,
                         onSelectMode = { codingViewModel.selectMode(it) },
                         onTextChanged = { codingViewModel.onTextChanged(it) },
+                        onInsertRichTextPreset = { codingViewModel.onInsertRichTextPreset() },
                         onCustomProbChanged = { codingViewModel.onCustomProbabilitiesChanged(it) },
                         onCalculateClick = {
                             codingViewModel.calculate()

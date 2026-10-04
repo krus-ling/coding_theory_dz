@@ -1,6 +1,5 @@
 package com.example.test1internalrepresentation.ui.input
 
-import kotlin.math.abs
 import androidx.lifecycle.ViewModel
 import com.example.test1internalrepresentation.data.VariantsRepository
 import com.example.test1internalrepresentation.domain.model.CodingAnalysis
@@ -14,10 +13,12 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlin.math.abs
 
 enum class InputMode {
     VARIANT_7_UPPER,
     VARIANT_7_LOWER,
+    LARGE_ALPHABET_120,
     TEXT_ANALYSIS,
     CUSTOM_PROBABILITIES
 }
@@ -29,7 +30,14 @@ data class UiState(
     val symbols: List<SymbolProbability> = emptyList(),
     val analysisResult: CodingAnalysis? = null,
     val errorMessage: String? = null
-)
+) {
+    val uniqueSymbolCount: Int
+        get() = if (currentMode == InputMode.TEXT_ANALYSIS) {
+            inputText.toSet().size
+        } else {
+            symbols.size
+        }
+}
 
 class CodingViewModel(
     private val repository: VariantsRepository = VariantsRepository(),
@@ -51,8 +59,9 @@ class CodingViewModel(
             val updatedSymbols = when (mode) {
                 InputMode.VARIANT_7_UPPER -> repository.getVariantSymbols(7, isUpper = true)
                 InputMode.VARIANT_7_LOWER -> repository.getVariantSymbols(7, isUpper = false)
+                InputMode.LARGE_ALPHABET_120 -> repository.getZipf120Symbols()
                 InputMode.TEXT_ANALYSIS -> {
-                    val defaultText = repository.getSampleLongText()
+                    val defaultText = if (state.inputText.isEmpty()) repository.getSampleLongText() else state.inputText
                     textAnalysisUseCase.execute(defaultText)
                 }
                 InputMode.CUSTOM_PROBABILITIES -> parseCustomProbabilities(state.customProbabilitiesText)
@@ -70,6 +79,20 @@ class CodingViewModel(
     fun onTextChanged(newText: String) {
         val symbols = textAnalysisUseCase.execute(newText)
         _uiState.update { it.copy(inputText = newText, symbols = symbols) }
+    }
+
+    fun onInsertRichTextPreset() {
+        val richText = repository.getRich100PlusUniqueSymbolsText()
+        val symbols = textAnalysisUseCase.execute(richText)
+        _uiState.update {
+            it.copy(
+                currentMode = InputMode.TEXT_ANALYSIS,
+                inputText = richText,
+                symbols = symbols,
+                analysisResult = null,
+                errorMessage = null
+            )
+        }
     }
 
     fun onCustomProbabilitiesChanged(raw: String) {

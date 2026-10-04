@@ -10,7 +10,6 @@ data class VariantData(
 
 class VariantsRepository {
 
-    // Таблица 1.1 из методички (основной упор на вариант 7)
     private val variants = listOf(
         VariantData(
             number = 7,
@@ -27,8 +26,40 @@ class VariantsRepository {
         }
     }
 
+    /**
+     * Генератор распределения вероятностей для алфавита из 120 уникальных символов (x₁..x₁₂₀).
+     * Вероятности строго отсортированы по убыванию, а их сумма строго равна 1.0.
+     */
+    fun getZipf120Symbols(): List<SymbolProbability> {
+        val count = 120
+        val weights = (1..count).map { 1.0 / it }
+        val sumWeights = weights.sum()
+        val probs = weights.map { it / sumWeights }
+
+        val sumExceptLast = probs.dropLast(1).sum()
+        val adjustedLast = 1.0 - sumExceptLast
+
+        return probs.mapIndexed { index, prob ->
+            val finalProb = if (index == count - 1) adjustedLast else prob
+            SymbolProbability(symbol = "x${index + 1}", probability = finalProb)
+        }
+    }
+
     fun getSampleLongText(): String {
         return "Теория информации и кодирования изучает математические методы сжатия, передачи и защиты данных. " +
                 "Алгоритмы Хаффмана и Шеннона-Фано устраняют избыточность сообщений в каналах без помех."
+    }
+
+    /**
+     * Готовый пресет богатого текста с более чем 100 УНИКАЛЬНЫМИ символами (кириллица, латиница, цифры, спецсимволы).
+     */
+    fun getRich100PlusUniqueSymbolsText(): String {
+        return "Теория информации & алгоритмы сжатия данных (Lab №1): " +
+                "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ " +
+                "абвгдеёжзийклмнопрстуфхцчшщъыьэюя " +
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ " +
+                "abcdefghijklmnopqrstuvwxyz " +
+                "0123456789 " +
+                "!@#$%^&*()_+-=[]{}|;:'\",.<>/?~«»—±°×÷"
     }
 }
