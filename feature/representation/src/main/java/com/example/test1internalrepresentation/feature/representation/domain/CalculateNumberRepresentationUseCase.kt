@@ -2,10 +2,21 @@ package com.example.test1internalrepresentation.feature.representation.domain
 
 import kotlin.math.abs
 
+/**
+ * UseCase алгоритма перевода операндов в дополнительный код и их двоичного сложения
+ * с автоматическим подбором разрядной сетки (2, 4, 8, 16, 32 бит).
+ */
 class CalculateNumberRepresentationUseCase {
 
     private val superscripts = listOf("⁰", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸")
 
+    /**
+     * Выполняет двоичное сложение двух целых десятичных чисел A и B.
+     *
+     * @param a Операнд A.
+     * @param b Операнд B.
+     * @return Объект [Task1Result] с двоичной суммой, пошаговым решением и проверкой.
+     */
     fun execute(a: Int, b: Int): Task1Result {
         val sum = a + b
         val maxValue = maxOf(abs(a), abs(b), abs(sum))

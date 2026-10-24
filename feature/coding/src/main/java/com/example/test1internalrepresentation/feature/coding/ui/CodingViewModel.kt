@@ -13,8 +13,12 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import java.util.Locale
 import kotlin.math.abs
 
+/**
+ * Варианты источника сообщений для Лабораторной работы №1.
+ */
 enum class InputMode {
     VARIANT_7_UPPER,
     VARIANT_7_LOWER,
@@ -23,6 +27,9 @@ enum class InputMode {
     CUSTOM_PROBABILITIES
 }
 
+/**
+ * Состояние UI экрана кодирования и выбора источников.
+ */
 data class UiState(
     val currentMode: InputMode = InputMode.VARIANT_7_UPPER,
     val inputText: String = "",
@@ -39,6 +46,9 @@ data class UiState(
         }
 }
 
+/**
+ * ViewModel управления состоянием эффективного кодирования и расчета алгоритмов сжатия.
+ */
 class CodingViewModel(
     private val repository: VariantsRepository = VariantsRepository(),
     private val shannonFanoUseCase: BuildShannonFanoUseCase = BuildShannonFanoUseCase(),
@@ -54,6 +64,9 @@ class CodingViewModel(
         selectMode(InputMode.VARIANT_7_UPPER)
     }
 
+    /**
+     * Переключает текущий режим источника сообщений.
+     */
     fun selectMode(mode: InputMode) {
         _uiState.update { state ->
             val updatedSymbols = when (mode) {
@@ -76,11 +89,17 @@ class CodingViewModel(
         }
     }
 
+    /**
+     * Обрабатывает изменение текста для частотного анализа.
+     */
     fun onTextChanged(newText: String) {
         val symbols = textAnalysisUseCase.execute(newText)
         _uiState.update { it.copy(inputText = newText, symbols = symbols) }
     }
 
+    /**
+     * Вставляет готовый текст, гарантирующий более 100 уникальных символов.
+     */
     fun onInsertRichTextPreset() {
         val richText = repository.getRich100PlusUniqueSymbolsText()
         val symbols = textAnalysisUseCase.execute(richText)
@@ -95,11 +114,17 @@ class CodingViewModel(
         }
     }
 
+    /**
+     * Обрабатывает изменение пользовательской строки вероятностей.
+     */
     fun onCustomProbabilitiesChanged(raw: String) {
         val symbols = parseCustomProbabilities(raw)
         _uiState.update { it.copy(customProbabilitiesText = raw, symbols = symbols) }
     }
 
+    /**
+     * Запускает процедуру построения кодов Шеннона-Фано, Хаффмана и вычисления метрик.
+     */
     fun calculate() {
         val symbols = _uiState.value.symbols
         if (symbols.isEmpty()) {
@@ -110,7 +135,8 @@ class CodingViewModel(
         val probs = symbols.map { it.probability }
         val sum = probs.sum()
         if (abs(sum - 1.0) > 0.05) {
-            _uiState.update { it.copy(errorMessage = "Сумма вероятностей равна ${String.format("%.3f", sum)}, а должна быть 1.0") }
+            val formattedSum = String.format(Locale.US, "%.3f", sum)
+            _uiState.update { it.copy(errorMessage = "Сумма вероятностей равна $formattedSum, а должна быть 1.0") }
             return
         }
 

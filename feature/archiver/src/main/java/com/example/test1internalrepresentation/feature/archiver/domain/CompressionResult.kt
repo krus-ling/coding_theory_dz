@@ -1,5 +1,18 @@
 package com.example.test1internalrepresentation.feature.archiver.domain
 
+/**
+ * Отчет с результатами сжатия файла алгоритмом Хаффмана.
+ *
+ * @property originalFileName Исходное имя и расширение файла.
+ * @property originalSizeBytes Объем исходных данных V₁ в байтах.
+ * @property compressedSizeBytes Объем упакованного архива V₂ в байтах (заголовок + тело).
+ * @property headerSizeBytes Размер служебного заголовка в байтах.
+ * @property compressionRatio Коэффициент сжатия K_сж = V₁ / V₂.
+ * @property spaceSavingPercent Процент сэкономленного пространства.
+ * @property compressedData Упакованный массив байт.
+ * @property sampleHex HEX-дамп первых байт архива.
+ * @property codesMap Карта построения байтовых кодов Хаффмана.
+ */
 data class CompressionReport(
     val originalFileName: String,
     val originalSizeBytes: Long,
@@ -44,6 +57,17 @@ data class CompressionReport(
     }
 }
 
+/**
+ * Отчет с результатами деархивации и распаковки файла `.huff`.
+ *
+ * @property archiveFileName Имя файла архива.
+ * @property restoredFileName Исходное восстановленное имя файла с родным расширением.
+ * @property archiveSizeBytes Объем сжатого архива V₂ в байтах.
+ * @property restoredSizeBytes Восстановленный объем V₁ в байтах.
+ * @property alphabetSize Мощность байтового алфавита N.
+ * @property restoredData Восстановленный массив байт.
+ * @property sampleHex HEX-дамп первых восстановленных байт.
+ */
 data class DecompressionReport(
     val archiveFileName: String,
     val restoredFileName: String,

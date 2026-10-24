@@ -2,12 +2,22 @@ package com.example.test1internalrepresentation.feature.coding.data
 
 import com.example.test1internalrepresentation.core.domain.model.SymbolProbability
 
+/**
+ * Модель данных варианта из методического пособия (Таблица 1.1).
+ *
+ * @property number Номер варианта (например, 7).
+ * @property upperRow Верхний ряд вероятностей.
+ * @property lowerRow Нижний ряд вероятностей.
+ */
 data class VariantData(
     val number: Int,
     val upperRow: List<Double>,
     val lowerRow: List<Double>
 )
 
+/**
+ * Репозиторий источника вариантов из методички, распределения Ципфа и генерации текстов.
+ */
 class VariantsRepository {
 
     private val variants = listOf(
@@ -18,6 +28,12 @@ class VariantsRepository {
         )
     )
 
+    /**
+     * Возвращает список вероятностей символов для указанного варианта.
+     *
+     * @param variantNumber Номер варианта (7).
+     * @param isUpper Флаг выбора верхнего ряда (true) или нижнего ряда (false).
+     */
     fun getVariantSymbols(variantNumber: Int, isUpper: Boolean): List<SymbolProbability> {
         val variant = variants.find { it.number == variantNumber } ?: variants.first()
         val row = if (isUpper) variant.upperRow else variant.lowerRow
@@ -26,6 +42,9 @@ class VariantsRepository {
         }
     }
 
+    /**
+     * Генерирует ансамбль сообщений из N = 120 символов по закону распределения Ципфа.
+     */
     fun getZipf120Symbols(): List<SymbolProbability> {
         val count = 120
         val weights = (1..count).map { 1.0 / it }
@@ -41,11 +60,17 @@ class VariantsRepository {
         }
     }
 
+    /**
+     * Возвращает образцовый текст средней длины для тестирования частотного анализа.
+     */
     fun getSampleLongText(): String {
         return "Теория информации и кодирования изучает математические методы сжатия, передачи и защиты данных. " +
                 "Алгоритмы Хаффмана и Шеннона-Фано устраняют избыточность сообщений в каналах без помех."
     }
 
+    /**
+     * Возвращает насыщенный текст, содержащий более 100 уникальных символов алфавита.
+     */
     fun getRich100PlusUniqueSymbolsText(): String {
         return "Теория информации & алгоритмы сжатия данных (Lab №1): " +
                 "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ " +

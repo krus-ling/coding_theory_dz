@@ -24,6 +24,11 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
+/**
+ * Хронологический список шагов решения задачи перевода и двоичного сложения операндов.
+ *
+ * @param steps Пошаговые математические действия в текстовом виде.
+ */
 @Composable
 fun TimelineStepsList(steps: List<String>) {
     Column(

@@ -31,11 +31,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import com.example.test1internalrepresentation.core.ui.R as CoreUiR
+import com.example.test1internalrepresentation.feature.representation.R as RepR
 
+/**
+ * Модель быстрого примера (пресета) операндов для расчета представления чисел.
+ */
 data class PresetPair(val a: Int, val b: Int, val title: String, val subtitle: String)
 
 val PRESETS = listOf(
@@ -45,6 +51,9 @@ val PRESETS = listOf(
     PresetPair(127, -128, "127 и -128", "Граничные значения 8-битной сетки")
 )
 
+/**
+ * Компонент ввода операндов A и B с вызовом диалогового окна выбора быстрого примера.
+ */
 @Composable
 fun InputAndPresetsSection(
     inputA: String,
@@ -70,7 +79,7 @@ fun InputAndPresetsSection(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Входные параметры",
+                    text = stringResource(RepR.string.rep_input_params),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface
@@ -93,7 +102,7 @@ fun InputAndPresetsSection(
                             modifier = Modifier.size(14.dp)
                         )
                         Text(
-                            text = "Выбрать пример",
+                            text = stringResource(RepR.string.rep_select_preset),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -113,7 +122,7 @@ fun InputAndPresetsSection(
                 OutlinedTextField(
                     value = inputA,
                     onValueChange = onInputAChange,
-                    label = { Text("Операнд А") },
+                    label = { Text(stringResource(RepR.string.rep_operand_a)) },
                     leadingIcon = { Icon(Icons.Default.Numbers, contentDescription = null) },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     shape = RoundedCornerShape(16.dp),
@@ -127,7 +136,7 @@ fun InputAndPresetsSection(
                 OutlinedTextField(
                     value = inputB,
                     onValueChange = onInputBChange,
-                    label = { Text("Операнд Б") },
+                    label = { Text(stringResource(RepR.string.rep_operand_b)) },
                     leadingIcon = { Icon(Icons.Default.Numbers, contentDescription = null) },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     shape = RoundedCornerShape(16.dp),
@@ -161,12 +170,12 @@ fun InputAndPresetsSection(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = "Быстрые примеры",
+                            text = stringResource(RepR.string.rep_quick_examples),
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold
                         )
                         IconButton(onClick = { showDialog = false }) {
-                            Icon(Icons.Default.Close, contentDescription = "Закрыть")
+                            Icon(Icons.Default.Close, contentDescription = stringResource(CoreUiR.string.action_close))
                         }
                     }
 

@@ -4,6 +4,9 @@ import com.example.test1internalrepresentation.core.domain.model.CodeWord
 import com.example.test1internalrepresentation.core.domain.model.SymbolProbability
 import java.util.PriorityQueue
 
+/**
+ * UseCase построения оптимального префиксного кода Хаффмана методом объединения наименее вероятных символов.
+ */
 class BuildHuffmanUseCase {
 
     private data class Node(
@@ -16,6 +19,12 @@ class BuildHuffmanUseCase {
         override fun compareTo(other: Node): Int = this.probability.compareTo(other.probability)
     }
 
+    /**
+     * Строит оптимальные кодовые слова Хаффмана для заданного ансамбля символов.
+     *
+     * @param symbols Ансамбль символов и их вероятностей.
+     * @return Список кодовых слов [CodeWord].
+     */
     fun execute(symbols: List<SymbolProbability>): List<CodeWord> {
         if (symbols.isEmpty()) return emptyList()
 

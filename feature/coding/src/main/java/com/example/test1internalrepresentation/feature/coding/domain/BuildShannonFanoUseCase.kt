@@ -4,8 +4,17 @@ import com.example.test1internalrepresentation.core.domain.model.CodeWord
 import com.example.test1internalrepresentation.core.domain.model.SymbolProbability
 import kotlin.math.abs
 
+/**
+ * UseCase построения двоичного кода алгоритмом Шеннона — Фано путем рекурсивного деления упорядоченного списка на две группы.
+ */
 class BuildShannonFanoUseCase {
 
+    /**
+     * Строит кодовые слова методом Шеннона — Фано.
+     *
+     * @param symbols Исходный ансамбль символов с вероятностями.
+     * @return Список построенных кодовых слов [CodeWord].
+     */
     fun execute(symbols: List<SymbolProbability>): List<CodeWord> {
         if (symbols.isEmpty()) return emptyList()
 

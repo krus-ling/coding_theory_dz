@@ -29,10 +29,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.test1internalrepresentation.feature.representation.R as RepR
 
+/**
+ * Раскрывающийся блок (аккордеон) детальной математической проверки полученного результата.
+ *
+ * @param isExpanded Флаг текущего состояния развернутости блока.
+ * @param verificationSteps Пункты математической проверки результата.
+ * @param onToggleExpand Обработчик переключения состояния развернутости.
+ */
 @Composable
 fun VerificationSpoilerCard(
     isExpanded: Boolean,
@@ -63,7 +72,7 @@ fun VerificationSpoilerCard(
                     )
                     Spacer(modifier = Modifier.width(12.dp))
                     Text(
-                        text = "Детальная проверка решения",
+                        text = stringResource(RepR.string.rep_verification_title),
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold
                     )

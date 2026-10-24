@@ -16,11 +16,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.test1internalrepresentation.feature.representation.R as RepR
 
+/**
+ * Карточка отображения итогового двоичного значения результата сложения в дополнительном коде.
+ *
+ * @param binaryResult Двоичная строка дополнительного кода.
+ * @param decimalResult Десятичный результат сложения.
+ * @param modifier Модификатор разметки.
+ */
 @Composable
 fun HeroResultCard(
     binaryResult: String,
@@ -44,7 +53,7 @@ fun HeroResultCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Итоговое значение (Доп. код)",
+                    text = stringResource(RepR.string.rep_result_title),
                     style = MaterialTheme.typography.labelLarge,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)

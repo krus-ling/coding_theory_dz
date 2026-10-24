@@ -6,6 +6,11 @@ import java.io.DataInputStream
 import java.nio.charset.StandardCharsets
 import java.util.PriorityQueue
 
+/**
+ * UseCase декодирования и деархивации файлов формата `.huff`.
+ * Валидирует сигнатуру 'HF', восстанавливает таблицу частот и дерево кодирования,
+ * зачитывает байты и восстанавливает оригинальное имя файла с его расширением.
+ */
 class DecompressHuffmanUseCase {
 
     private data class Node(
@@ -18,6 +23,13 @@ class DecompressHuffmanUseCase {
         override fun compareTo(other: Node): Int = this.freq.compareTo(other.freq)
     }
 
+    /**
+     * Выполняет деархивацию сжатого массива байт архива Хаффмана.
+     *
+     * @param compressedBytes Массив байт сжатого архива.
+     * @param archiveFileName Имя архива.
+     * @return [DecompressionReport] с восстановленными данными и исходным именем файла.
+     */
     operator fun invoke(compressedBytes: ByteArray, archiveFileName: String = "archive.huff"): DecompressionReport {
         if (compressedBytes.isEmpty()) {
             return DecompressionReport(

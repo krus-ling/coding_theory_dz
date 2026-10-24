@@ -1,0 +1,28 @@
+<resources>
+    <string name="coding_title">Эффективное кодирование</string>
+    <string name="coding_subtitle">Лабораторная работа №1 • Алгоритмы сжатия</string>
+    <string name="coding_select_source">Выберите источник сообщений:</string>
+    <string name="coding_source_title">Источник сообщений</string>
+    <string name="coding_change_mode">Сменить режим</string>
+    <string name="coding_ensemble_mode">Режим ансамбля</string>
+    <string name="coding_text_message">Текст сообщения</string>
+    <string name="coding_text_label">Введите текст для частотного анализа</string>
+    <string name="coding_insert_preset">Вставить готовый текст (>100 уникальных символов)</string>
+    <string name="coding_custom_prob_title">Ручной ввод вероятностей</string>
+    <string name="coding_custom_prob_label">Вероятности через запятую (например: 0.25, 0.25, 0.25, 0.25)</string>
+    <string name="coding_calculate_button">Построить коды и рассчитать метрики</string>
+    <string name="coding_ensemble_title">Ансамбль сообщений</string>
+    <string name="coding_alphabet_dialog_title">Алфавит сообщений</string>
+    <string name="coding_high_grade_met">Требование на высокую оценку выполнено (%1$d > 100)</string>
+    <string name="coding_high_grade_warning">Уникальных символов меньше 100 (%1$d). Используйте кнопку вставки текста.</string>
+    <string name="coding_click_to_view_all">Нажмите, чтобы просмотреть весь алфавит</string>
+    <string name="coding_results_title">Результаты кодирования</string>
+    <string name="coding_source_char">Характеристики источника</string>
+    <string name="coding_algo_comparison">Сравнение алгоритмов сжатия</string>
+    <string name="coding_code_table">Таблица кодовых слов</string>
+    <string name="coding_conclusion_title">Вывод:</string>
+    <string name="coding_info_tooltip">Справка по формулам</string>
+    <string name="coding_shannon_fano">Шеннон — Фано</string>
+    <string name="coding_huffman">Хаффман</string>
+    <string name="coding_optimal_badge">Оптимальнее ✔</string>
+</resources>

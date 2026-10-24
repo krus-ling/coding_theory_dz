@@ -6,6 +6,11 @@ import java.io.DataOutputStream
 import java.nio.charset.StandardCharsets
 import java.util.PriorityQueue
 
+/**
+ * UseCase алгоритма побитового сжатия произвольного файла методом Хаффмана.
+ * Записывает компактный служебный заголовок с сигнатурой 'HF', исходным именем файла,
+ * объемом данных V₁ и байтовой таблицей частот.
+ */
 class CompressHuffmanUseCase {
 
     private data class Node(
@@ -18,6 +23,12 @@ class CompressHuffmanUseCase {
         override fun compareTo(other: Node): Int = this.freq.compareTo(other.freq)
     }
 
+    /**
+     * Сжимает входной массив байт и возвращает отчет [CompressionReport].
+     *
+     * @param inputBytes Массив исходных байт.
+     * @param fileName Исходное имя файла с расширением.
+     */
     operator fun invoke(inputBytes: ByteArray, fileName: String = "data.bin"): CompressionReport {
         if (inputBytes.isEmpty()) {
             return CompressionReport(
