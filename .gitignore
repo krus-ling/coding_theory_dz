@@ -14,3 +14,9 @@
 .cxx
 local.properties
 /.idea/
+
+# Generated cache, artifacts, and build folders
+graphify-out/
+.artifacts/
+app/release/
+*.jks
