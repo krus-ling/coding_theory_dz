@@ -2,6 +2,7 @@ package com.example.test1internalrepresentation.ui.navigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -17,9 +18,14 @@ import com.example.test1internalrepresentation.feature.coding.ui.ResultsScreen
 import com.example.test1internalrepresentation.feature.representation.ui.RepresentationScreen
 import com.example.test1internalrepresentation.ui.home.HomeScreen
 
+/**
+ * Корневой навигационный контейнер приложения.
+ * Сохраняет состояние скролла [homeLazyListState] при переходах между экранами.
+ */
 @Composable
 fun RootScreen() {
     var currentScreen by remember { mutableStateOf<Screen>(Screen.Home) }
+    val homeLazyListState = rememberLazyListState()
 
     val codingViewModel: CodingViewModel = viewModel()
     val codingState by codingViewModel.uiState.collectAsState()
@@ -29,6 +35,7 @@ fun RootScreen() {
         when (currentScreen) {
             is Screen.Home -> {
                 HomeScreen(
+                    lazyListState = homeLazyListState,
                     onNavigateToScreen = { targetScreen ->
                         isShowingResults = false
                         currentScreen = targetScreen
