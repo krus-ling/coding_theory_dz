@@ -88,10 +88,17 @@ fun InputScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        text = "Эффективное кодирование (Лаб №1)",
-                        fontWeight = FontWeight.Bold
-                    )
+                    Column {
+                        Text(
+                            text = "Эффективное кодирование",
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Лабораторная работа №1 • Алгоритмы сжатия",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f)
+                        )
+                    }
                 },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
@@ -285,7 +292,7 @@ private fun TextAnalysisSection(
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = if (isUniqueOk) "Уникальных: $uniqueCount ✔" else "Уникальных: $uniqueCount / 100",
+                            text = if (isUniqueOk) "$uniqueCount символов ✔" else "$uniqueCount / 100 символов",
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )

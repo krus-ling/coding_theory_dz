@@ -41,6 +41,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -48,6 +49,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SegmentedButtonDefaults
+import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -100,10 +103,17 @@ fun RepresentationScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        text = "Представление чисел",
-                        fontWeight = FontWeight.Bold
-                    )
+                    Column {
+                        Text(
+                            text = "Представление чисел",
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = "Контрольная работа • Двоичная алгебра",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f)
+                        )
+                    }
                 },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
@@ -242,6 +252,7 @@ fun Task1Screen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun InputAndPresetsSection(
     inputA: String,
@@ -307,11 +318,25 @@ private fun InputAndPresetsSection(
 
             LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 items(PRESETS) { preset ->
+                    val isSelected = inputA == preset.a.toString() && inputB == preset.b.toString()
                     FilterChip(
-                        selected = inputA == preset.a.toString() && inputB == preset.b.toString(),
+                        selected = isSelected,
                         onClick = { onSelectPreset(preset) },
-                        label = { Text("${preset.a} и ${preset.b}") },
-                        shape = RoundedCornerShape(12.dp)
+                        label = { Text("${preset.a} и ${preset.b}", fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal) },
+                        leadingIcon = if (isSelected) {
+                            {
+                                Icon(
+                                    imageVector = Icons.Default.CheckCircle,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(16.dp)
+                                )
+                            }
+                        } else null,
+                        shape = RoundedCornerShape(12.dp),
+                        colors = FilterChipDefaults.filterChipColors(
+                            selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                            selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
+                        )
                     )
                 }
             }
