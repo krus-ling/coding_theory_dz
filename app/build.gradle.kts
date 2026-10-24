@@ -36,16 +36,24 @@ android {
             isMinifyEnabled = false
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     buildFeatures {
         compose = true
     }
 }
 
 dependencies {
+    implementation(project(":core:domain"))
+    implementation(project(":core:ui"))
+    implementation(project(":feature:representation"))
+    implementation(project(":feature:coding"))
+    implementation(project(":feature:archiver"))
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)

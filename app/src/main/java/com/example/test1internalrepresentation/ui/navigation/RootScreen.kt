@@ -10,11 +10,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.test1internalrepresentation.feature.archiver.ui.Lab2Screen
+import com.example.test1internalrepresentation.feature.coding.ui.CodingViewModel
+import com.example.test1internalrepresentation.feature.coding.ui.InputScreen
+import com.example.test1internalrepresentation.feature.coding.ui.ResultsScreen
+import com.example.test1internalrepresentation.feature.representation.ui.RepresentationScreen
 import com.example.test1internalrepresentation.ui.home.HomeScreen
-import com.example.test1internalrepresentation.ui.input.CodingViewModel
-import com.example.test1internalrepresentation.ui.input.InputScreen
-import com.example.test1internalrepresentation.ui.representation.RepresentationScreen
-import com.example.test1internalrepresentation.ui.result.ResultsScreen
 
 @Composable
 fun RootScreen() {
@@ -64,6 +65,12 @@ fun RootScreen() {
                         onBackClick = { currentScreen = Screen.Home }
                     )
                 }
+            }
+
+            is Screen.Lab2Compressor -> {
+                Lab2Screen(
+                    onBackClick = { currentScreen = Screen.Home }
+                )
             }
         }
     }

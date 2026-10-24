@@ -22,6 +22,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Analytics
+import androidx.compose.material.icons.filled.Archive
 import androidx.compose.material.icons.filled.Calculate
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.School
@@ -99,7 +100,7 @@ fun HomeScreen(
 
             item {
                 DashboardTileCard(
-                    badgeText = "Базовые операции",
+                    badgeText = "Контрольная работа",
                     title = "Внутреннее представление чисел",
                     subtitle = "Прямой, обратный и дополнительный код, двоичное сложение операндов, пошаговая проверка решений.",
                     icon = Icons.Default.Calculate,
@@ -114,6 +115,16 @@ fun HomeScreen(
                     subtitle = "Методы Шеннона — Фано и Хаффмана, энтропия, K_сс, K_оэ, анализ текстов (>100 символов).",
                     icon = Icons.Default.Analytics,
                     onClick = { onNavigateToScreen(Screen.Coding) }
+                )
+            }
+
+            item {
+                DashboardTileCard(
+                    badgeText = "Лабораторная №2",
+                    title = "Архиватор (Сжатие Хаффмана)",
+                    subtitle = "Сжатие и распаковка данных без потерь, побитовая упаковка, таблица частот в заголовке, оценка K_сж.",
+                    icon = Icons.Default.Archive,
+                    onClick = { onNavigateToScreen(Screen.Lab2Compressor) }
                 )
             }
         }
