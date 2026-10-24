@@ -1,0 +1,14 @@
+<resources>
+    <string name="rep_title">Представление чисел</string>
+    <string name="rep_subtitle">Контрольная работа • Двоичная алгебра</string>
+    <string name="rep_input_params">Входные параметры</string>
+    <string name="rep_operand_a">Операнд А</string>
+    <string name="rep_operand_b">Операнд Б</string>
+    <string name="rep_select_preset">Выбрать пример</string>
+    <string name="rep_calculate">Рассчитать представление</string>
+    <string name="rep_quick_examples">Быстрые примеры</string>
+    <string name="rep_active_preset">Активный пример: %1$s (%2$s)</string>
+    <string name="rep_result_title">Итоговое значение (Доп. код)</string>
+    <string name="rep_solution_steps">Пошаговое решение</string>
+    <string name="rep_verification_title">Детальная проверка решения</string>
+</resources>

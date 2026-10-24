@@ -24,3 +24,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Test 1 Internal Representation"
 include(":app")
+include(":core:domain")
+include(":core:ui")
+include(":feature:representation")
+include(":feature:coding")
+include(":feature:archiver")

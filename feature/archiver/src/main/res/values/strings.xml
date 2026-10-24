@@ -1,0 +1,23 @@
+<resources>
+    <string name="archiver_title">Архиватор Хаффмана</string>
+    <string name="archiver_subtitle">Лабораторная работа №2 • Сжатие без потерь</string>
+    <string name="tab_compress">Архивация (Сжатие)</string>
+    <string name="tab_decompress">Деархивация (Распаковка)</string>
+    <string name="compress_pick_file">Выбрать исходный файл для сжатия</string>
+    <string name="compress_pick_desc">Выбор произвольного документа из памяти устройства</string>
+    <string name="decompress_pick_file">Выбрать файл архива (.huff)</string>
+    <string name="decompress_pick_desc">Чтение сигнатуры HF, таблицы частот и декодирование</string>
+    <string name="test_seq_title">Тестовые последовательности</string>
+    <string name="change_set">Сменить набор</string>
+    <string name="lossless_compression">Сжатие без потерь</string>
+    <string name="orig_size">Исходный объем (V₁)</string>
+    <string name="arch_size">Объем архива (V₂)</string>
+    <string name="comp_ratio">Коэффициент сжатия (K_сж):</string>
+    <string name="export_archive">Экспортировать архив (.huff)</string>
+    <string name="header_dump_title">Служебный заголовок архива (%1$d байт)</string>
+    <string name="huffman_table_title">Таблица кодов Хаффмана (N = %1$d)</string>
+    <string name="restored_hex_title">Первые байты восстановленного файла (HEX-дамп)</string>
+    <string name="signature_verified">Сигнатура \'HF\' подтверждена</string>
+    <string name="restored_size">Восстановленный объем (V₁)</string>
+    <string name="save_restored_button">Сохранить распакованный файл (%1$s)</string>
+</resources>

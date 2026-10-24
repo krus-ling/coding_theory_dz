@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Теория кодирования</string>
+    <string name="action_back">Назад</string>
+    <string name="action_close">Закрыть</string>
+    <string name="action_save">Сохранить</string>
+    <string name="action_export">Экспортировать</string>
+    <string name="action_understand">Понятно</string>
+    <string name="action_cancel">Отмена</string>
+</resources>
