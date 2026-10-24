@@ -34,14 +34,14 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.FormatListNumbered
 import androidx.compose.material.icons.filled.TextFields
+import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.UnfoldMore
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -49,6 +49,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -69,6 +70,20 @@ import androidx.compose.ui.window.DialogProperties
 import com.example.test1internalrepresentation.core.domain.model.SymbolProbability
 import com.example.test1internalrepresentation.core.domain.util.formatDecimal
 import kotlin.math.abs
+
+data class ModeOption(
+    val mode: InputMode,
+    val title: String,
+    val description: String
+)
+
+private val MODE_OPTIONS = listOf(
+    ModeOption(InputMode.VARIANT_7_UPPER, "Вариант 7 (Верхний ряд)", "8 символов из методички Таблица 1.1"),
+    ModeOption(InputMode.VARIANT_7_LOWER, "Вариант 7 (Нижний ряд)", "8 альтернативных вероятностей Таблицы 1.1"),
+    ModeOption(InputMode.LARGE_ALPHABET_120, "Алфавит 120 символов (Закон Ципфа)", "Большой ансамбль x₁..x₁₂₀ с нормированным убыванием"),
+    ModeOption(InputMode.TEXT_ANALYSIS, "Частотный анализ текста (>100 уникальных)", "Подсчет частот букв в произвольном тексте"),
+    ModeOption(InputMode.CUSTOM_PROBABILITIES, "Ручной ввод вероятностей", "Ввод значений через запятую (сумма = 1.0)")
+)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -119,14 +134,6 @@ fun InputScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            item {
-                Text(
-                    text = "Выберите источник сообщений:",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-
             item {
                 ModeSelectionSection(
                     currentMode = state.currentMode,
@@ -205,41 +212,171 @@ private fun ModeSelectionSection(
     currentMode: InputMode,
     onSelectMode: (InputMode) -> Unit
 ) {
-    val modes = listOf(
-        InputMode.VARIANT_7_UPPER to "Вар. 7 (Верх)",
-        InputMode.VARIANT_7_LOWER to "Вар. 7 (Низ)",
-        InputMode.LARGE_ALPHABET_120 to "Алфавит 120 символов (Ципф)",
-        InputMode.TEXT_ANALYSIS to "Текст >100 уникальных",
-        InputMode.CUSTOM_PROBABILITIES to "Вручную"
-    )
+    var showDialog by remember { mutableStateOf(false) }
+    val currentOption = MODE_OPTIONS.find { it.mode == currentMode } ?: MODE_OPTIONS.first()
 
-    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        items(modes) { (mode, label) ->
-            val isSelected = currentMode == mode
-            FilterChip(
-                selected = isSelected,
-                onClick = { onSelectMode(mode) },
-                label = {
-                    Text(
-                        text = label,
-                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerLow)
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(
+                        imageVector = Icons.Default.Tune,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(18.dp)
                     )
-                },
-                leadingIcon = if (isSelected) {
-                    {
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = "Источник сообщений",
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+
+                Surface(
+                    onClick = { showDialog = true },
+                    shape = RoundedCornerShape(10.dp),
+                    color = MaterialTheme.colorScheme.primaryContainer,
+                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(
+                            text = "Сменить режим",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold
+                        )
                         Icon(
-                            imageVector = Icons.Default.CheckCircle,
+                            imageVector = Icons.Default.UnfoldMore,
                             contentDescription = null,
-                            modifier = Modifier.size(16.dp)
+                            modifier = Modifier.size(14.dp)
                         )
                     }
-                } else null,
-                shape = RoundedCornerShape(12.dp),
-                colors = FilterChipDefaults.filterChipColors(
-                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
-                )
-            )
+                }
+            }
+
+            Surface(
+                onClick = { showDialog = true },
+                shape = RoundedCornerShape(14.dp),
+                color = MaterialTheme.colorScheme.surfaceContainerHighest,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Row(
+                    modifier = Modifier.padding(12.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.CheckCircle,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(20.dp)
+                    )
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = currentOption.title,
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = currentOption.description,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    if (showDialog) {
+        Dialog(onDismissRequest = { showDialog = false }) {
+            Surface(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                shape = RoundedCornerShape(24.dp),
+                color = MaterialTheme.colorScheme.surface,
+                tonalElevation = 6.dp
+            ) {
+                Column(
+                    modifier = Modifier.padding(20.dp),
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Режим ансамбля",
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                        IconButton(onClick = { showDialog = false }) {
+                            Icon(Icons.Default.Close, contentDescription = "Закрыть")
+                        }
+                    }
+
+                    HorizontalDivider()
+
+                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        MODE_OPTIONS.forEach { option ->
+                            val isSelected = currentMode == option.mode
+                            Surface(
+                                onClick = {
+                                    onSelectMode(option.mode)
+                                    showDialog = false
+                                },
+                                shape = RoundedCornerShape(12.dp),
+                                color = if (isSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceContainerLow,
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(14.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Column(modifier = Modifier.weight(1f)) {
+                                        Text(
+                                            text = option.title,
+                                            style = MaterialTheme.typography.titleMedium,
+                                            fontWeight = FontWeight.Bold,
+                                            color = if (isSelected) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurface
+                                        )
+                                        Text(
+                                            text = option.description,
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = if (isSelected) MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f) else MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                    }
+                                    RadioButton(
+                                        selected = isSelected,
+                                        onClick = {
+                                            onSelectMode(option.mode)
+                                            showDialog = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
